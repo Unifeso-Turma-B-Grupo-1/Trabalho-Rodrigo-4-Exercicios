@@ -1,6 +1,10 @@
 g_Valor_ingresso = 100
 g_Categorias = []
 
+##########################
+## Andrea Cappelli Neto ##
+##########################
+
 def __init__():
     qtd_ingressos = int(input("Quantos ingresso você deseja comprar?\n"))
     desconto = check_desconto(qtd_ingressos)
@@ -38,3 +42,4 @@ def preco_final(qtd_ingressos):
     f"\nParcelado em 3x de R${(valor_final / 3):.2f}" +
     f"\nParcelado em 6x de R${juros(valor_final) / 6 :.2f} (total: R${juros(valor_final):.2f})")           
 __init__()
+
