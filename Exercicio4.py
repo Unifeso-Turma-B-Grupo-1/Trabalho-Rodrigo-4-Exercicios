@@ -1,9 +1,9 @@
-g_Valor_ingresso = 100
-g_Categorias = []
-
 ##########################
 ## Andrea Cappelli Neto ##
 ##########################
+
+g_Valor_ingresso = 100
+g_Categorias = []
 
 def __init__():
     qtd_ingressos = int(input("Quantos ingresso você deseja comprar?\n"))
@@ -27,19 +27,16 @@ def preco_final(qtd_ingressos):
         valor_final += c
     if qtd_ingressos > 3:
         valor_final *= 0.9
-    
-    #lmao
-    juros = lambda x: (((((x*1.02)*1.02)*1.02)*1.02)*1.02)*1.02
+    #XD
+    juros = valor_final * (1 + 0.02)**6
 
     print("-"*3 + " RESUMO DA COMPRA " + "-"*3 +
     f"\nQuantidade de ingressos: {qtd_ingressos}" +
     f"\nValor final com descontos aplicados: {valor_final}" +
-
     "\n\n" +
-
     "-"*3 + " FORMAS DE PAGAMENTO " + "-"*3 +
     f"\nÀ vista (10% de desc.): R${valor_final*0.9:.2f}" +
     f"\nParcelado em 3x de R${(valor_final / 3):.2f}" +
-    f"\nParcelado em 6x de R${juros(valor_final) / 6 :.2f} (total: R${juros(valor_final):.2f})")           
-__init__()
+    f"\nParcelado em 6x de R${juros / 6:.2f} (total: R${juros:.2f})")
 
+__init__()
